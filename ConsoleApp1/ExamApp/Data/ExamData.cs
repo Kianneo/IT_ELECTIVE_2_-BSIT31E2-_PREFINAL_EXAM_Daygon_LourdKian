@@ -207,6 +207,20 @@ namespace ExamApp.Data
                 CorrectLetter = "A",
                 Explanation = "A user can disable JavaScript or call the endpoint directly, so the server must re-validate."
             },
+             new QuestionAnswer
+            {
+                Number = 15,
+                Question = "A school requires every student to have a unique Student Number. Which rule best represents this requirement?",
+                Options = new List<Option>
+                {
+                    new Option("A", "Student Number should always be nullable"),
+                    new Option("B", "Student Number should be unique"),
+                    new Option("C", "Student Number should always be the same"),
+                    new Option("D", "Student Number should contain only spaces")
+                },
+                CorrectLetter = "B",
+                Explanation = "The requirement is literally uniqueness across all student records."
+            },
         };
     }
 }
