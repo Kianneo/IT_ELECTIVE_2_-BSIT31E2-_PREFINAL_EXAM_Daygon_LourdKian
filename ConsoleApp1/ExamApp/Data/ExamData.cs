@@ -137,6 +137,20 @@ namespace ExamApp.Data
                 CorrectLetter = "B",
                 Explanation = "Navigation properties let you traverse from one entity to its related entity in code."
             },
+             new QuestionAnswer
+            {
+                Number = 10,
+                Question = "What does .Include() generally allow EF Core to do?",
+                Options = new List<Option>
+                {
+                    new Option("A", "Delete the Section table"),
+                    new Option("B", "Load related Section data together with Students"),
+                    new Option("C", "Create a new Student"),
+                    new Option("D", "Validate Student input")
+                },
+                CorrectLetter = "B",
+                Explanation = "Include() performs eager loading of a related entity in the same query."
+            },
         };
     }
 }
