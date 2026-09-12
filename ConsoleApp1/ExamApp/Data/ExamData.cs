@@ -179,6 +179,20 @@ namespace ExamApp.Data
                 CorrectLetter = "A",
                 Explanation = "Include(s => s.Section) eagerly loads each Student's related Section in the same query."
             },
+             new QuestionAnswer
+            {
+                Number = 13,
+                Question = "Which type of validation occurs in the browser before a request is sent to the server?",
+                Options = new List<Option>
+                {
+                    new Option("A", "Database-level validation"),
+                    new Option("B", "Client-side validation"),
+                    new Option("C", "Server-side validation"),
+                    new Option("D", "EF Core migration validation")
+                },
+                CorrectLetter = "B",
+                Explanation = "Client-side validation runs in the browser (usually via JavaScript) before submission."
+            },
         };
     }
 }
