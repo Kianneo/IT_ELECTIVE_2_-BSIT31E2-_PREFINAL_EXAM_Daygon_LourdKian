@@ -67,6 +67,20 @@ namespace ExamApp.Data
                 CorrectLetter = "A",
                 Explanation = "DbContext manages the connection, change tracking, and querying against the database."
             },
+             new QuestionAnswer
+            {
+                Number = 5,
+                Question = "What does the following command primarily do?\n\ndotnet ef dbcontext scaffold \"ConnectionString\" Microsoft.EntityFrameworkCore.SqlServer -o Models",
+                Options = new List<Option>
+                {
+                    new Option("A", "Deletes the database"),
+                    new Option("B", "Creates a new MVC project"),
+                    new Option("C", "Generates EF Core models and a DbContext from an existing database"),
+                    new Option("D", "Starts the MVC application")
+                },
+                CorrectLetter = "C",
+                Explanation = "This is the Database-First scaffolding command that reverse-engineers models and a DbContext."
+            },
         };
     }
 }
