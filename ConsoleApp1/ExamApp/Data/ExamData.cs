@@ -263,6 +263,20 @@ namespace ExamApp.Data
                 CorrectLetter = "B",
                 Explanation = "UseExceptionHandler() is the built-in middleware for catching unhandled exceptions app-wide."
             },
+             new QuestionAnswer
+            {
+                Number = 19,
+                Question = "A user requests /Student/999, but Student 999 does not exist. What would be the most appropriate response?",
+                Options = new List<Option>
+                {
+                    new Option("A", "Display the student's information anyway"),
+                    new Option("B", "Display a Not Found (404) response/page"),
+                    new Option("C", "Delete Student 999"),
+                    new Option("D", "Create Student 999 automatically")
+                },
+                CorrectLetter = "B",
+                Explanation = "A missing resource should return an HTTP 404, not fabricate or silently mutate data."
+            },
         };
     }
 }
