@@ -1,8 +1,37 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model List<QuestionAnswer>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<section class="intro">
+    <h2>Answer Key Review</h2>
+    <p>Tap a card to flip it and reveal the chosen answer and the reasoning behind it.</p>
+    <p class="progress-label">@Model.Count of 20 items answered</p>
+</section>
+
+<div class="card-grid">
+    @foreach (var q in Model.OrderBy(x => x.Number))
+    {
+        <div class="flip-card" tabindex="0" onclick="this.classList.toggle('flipped')">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <span class="q-number">Q@(q.Number)</span>
+                    <p class="q-text">@q.Question</p>
+                    <ul class="q-options">
+                        @foreach (var opt in q.Options)
+                        {
+                            <li class="@(opt.Letter == q.CorrectLetter ? "opt correct" : "opt")">
+                                <strong>@opt.Letter.</strong> @opt.Text
+                            </li>
+                        }
+                    </ul>
+                    <span class="tap-hint">tap to reveal answer &rarr;</span>
+                </div>
+                <div class="flip-back">
+                    <span class="q-number">Q@(q.Number) Answer</span>
+                    <p class="answer-letter">@q.CorrectLetter</p>
+                    <p class="answer-text">@q.CorrectOption?.Text</p>
+                    <p class="explanation">@q.Explanation</p>
+                    <span class="tap-hint">tap to go back &larr;</span>
+                </div>
+            </div>
+        </div>
+    }
 </div>
