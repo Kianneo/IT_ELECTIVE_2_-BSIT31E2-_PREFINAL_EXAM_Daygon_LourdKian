@@ -221,20 +221,6 @@ namespace ExamApp.Data
                 CorrectLetter = "B",
                 Explanation = "The requirement is literally uniqueness across all student records."
             },
-             new QuestionAnswer
-            {
-                Number = 16,
-                Question = "Which is the best reason for having a database-level unique constraint on StudentNumber?",
-                Options = new List<Option>
-                {
-                    new Option("A", "It protects data integrity even if application-level validation is bypassed"),
-                    new Option("B", "It makes Razor Views render faster"),
-                    new Option("C", "It removes the need for a Controller"),
-                    new Option("D", "It automatically creates a ViewModel")
-                },
-                CorrectLetter = "A",
-                Explanation = "A DB-level constraint is the last line of defense, independent of any app-layer checks."
-            },
         };
     }
 }
