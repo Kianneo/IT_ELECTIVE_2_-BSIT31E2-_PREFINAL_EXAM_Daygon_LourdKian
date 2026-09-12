@@ -109,6 +109,20 @@ namespace ExamApp.Data
                 CorrectLetter = "B",
                 Explanation = "One Section has many Students, so from Section's side it's One-to-Many."
             },
+             new QuestionAnswer
+            {
+                Number = 8,
+                Question = "In the following example, what is SectionId?\n\npublic int SectionId { get; set; }\npublic Section Section { get; set; }",
+                Options = new List<Option>
+                {
+                    new Option("A", "Primary key of Student"),
+                    new Option("B", "Foreign key referencing Section"),
+                    new Option("C", "Navigation property"),
+                    new Option("D", "Database connection string")
+                },
+                CorrectLetter = "B",
+                Explanation = "SectionId is the scalar foreign key column pointing back to the Section table."
+            },
         };
     }
 }
