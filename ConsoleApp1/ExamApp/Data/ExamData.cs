@@ -95,6 +95,20 @@ namespace ExamApp.Data
                 CorrectLetter = "B",
                 Explanation = "Connection strings live in configuration (appsettings.json), not hard-coded in views or models."
             },
+             new QuestionAnswer
+            {
+                Number = 7,
+                Question = "A Student belongs to exactly one Section, while a Section can contain many students. What type of relationship is this?",
+                Options = new List<Option>
+                {
+                    new Option("A", "One-to-One"),
+                    new Option("B", "One-to-Many"),
+                    new Option("C", "Many-to-Many"),
+                    new Option("D", "Many-to-One only")
+                },
+                CorrectLetter = "B",
+                Explanation = "One Section has many Students, so from Section's side it's One-to-Many."
+            },
         };
     }
 }
