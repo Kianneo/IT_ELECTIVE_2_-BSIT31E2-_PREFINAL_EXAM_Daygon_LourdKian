@@ -39,6 +39,20 @@ namespace ExamApp.Data
                 CorrectLetter = "B",
                 Explanation = "Reverse-engineering models from an existing schema is the Database-First workflow."
             },
+             new QuestionAnswer
+            {
+                Number = 3,
+                Question = "What is the primary purpose of Entity Framework Core?",
+                Options = new List<Option>
+                {
+                    new Option("A", "To create HTML pages automatically"),
+                    new Option("B", "To replace the MVC Controller"),
+                    new Option("C", "To map objects in code to relational database data"),
+                    new Option("D", "To replace the C# compiler")
+                },
+                CorrectLetter = "C",
+                Explanation = "EF Core is an object-relational mapper (ORM) -- it maps C# classes to tables and rows."
+            },
         };
     }
 }
