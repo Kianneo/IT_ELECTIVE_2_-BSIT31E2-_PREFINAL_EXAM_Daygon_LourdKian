@@ -151,6 +151,20 @@ namespace ExamApp.Data
                 CorrectLetter = "B",
                 Explanation = "Include() performs eager loading of a related entity in the same query."
             },
+             new QuestionAnswer
+            {
+                Number = 11,
+                Question = "Why might a ViewModel be used when displaying Student and Section information?",
+                Options = new List<Option>
+                {
+                    new Option("A", "To replace the database"),
+                    new Option("B", "To combine or shape the data specifically needed by the view"),
+                    new Option("C", "To automatically create database tables"),
+                    new Option("D", "To prevent controllers from using LINQ")
+                },
+                CorrectLetter = "B",
+                Explanation = "ViewModels tailor/shape exactly the data a view needs, often combining multiple entities."
+            },
         };
     }
 }
