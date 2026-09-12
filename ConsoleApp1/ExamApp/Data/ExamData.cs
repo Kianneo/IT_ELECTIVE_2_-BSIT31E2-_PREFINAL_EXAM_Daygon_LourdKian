@@ -53,6 +53,20 @@ namespace ExamApp.Data
                 CorrectLetter = "C",
                 Explanation = "EF Core is an object-relational mapper (ORM) -- it maps C# classes to tables and rows."
             },
+             new QuestionAnswer
+            {
+                Number = 4,
+                Question = "Which EF Core component is primarily responsible for communicating with the database?",
+                Options = new List<Option>
+                {
+                    new Option("A", "DbContext"),
+                    new Option("B", "DbSetView"),
+                    new Option("C", "ControllerContext"),
+                    new Option("D", "RazorContext")
+                },
+                CorrectLetter = "A",
+                Explanation = "DbContext manages the connection, change tracking, and querying against the database."
+            },
         };
     }
 }
