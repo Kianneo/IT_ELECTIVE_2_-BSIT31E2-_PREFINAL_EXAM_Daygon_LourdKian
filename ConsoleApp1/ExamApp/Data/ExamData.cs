@@ -81,6 +81,20 @@ namespace ExamApp.Data
                 CorrectLetter = "C",
                 Explanation = "This is the Database-First scaffolding command that reverse-engineers models and a DbContext."
             },
+             new QuestionAnswer
+            {
+                Number = 6,
+                Question = "Where is a database connection string commonly stored in an ASP.NET Core MVC application?",
+                Options = new List<Option>
+                {
+                    new Option("A", "Program.cs only"),
+                    new Option("B", "appsettings.json"),
+                    new Option("C", "Index.cshtml"),
+                    new Option("D", "Student.cs")
+                },
+                CorrectLetter = "B",
+                Explanation = "Connection strings live in configuration (appsettings.json), not hard-coded in views or models."
+            },
         };
     }
 }
