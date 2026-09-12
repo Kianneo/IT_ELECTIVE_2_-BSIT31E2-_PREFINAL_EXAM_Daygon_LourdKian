@@ -165,6 +165,20 @@ namespace ExamApp.Data
                 CorrectLetter = "B",
                 Explanation = "ViewModels tailor/shape exactly the data a view needs, often combining multiple entities."
             },
+             new QuestionAnswer
+            {
+                Number = 12,
+                Question = "Consider this query:\n\nvar students = _context.Students.Include(s => s.Section).ToList();\n\nWhat is the main benefit of Include(s => s.Section)?",
+                Options = new List<Option>
+                {
+                    new Option("A", "It loads the related Section navigation property"),
+                    new Option("B", "It creates a Section object manually"),
+                    new Option("C", "It removes the foreign key"),
+                    new Option("D", "It prevents the query from accessing the database")
+                },
+                CorrectLetter = "A",
+                Explanation = "Include(s => s.Section) eagerly loads each Student's related Section in the same query."
+            },
         };
     }
 }
