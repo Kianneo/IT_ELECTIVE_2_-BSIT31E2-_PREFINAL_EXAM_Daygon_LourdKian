@@ -277,6 +277,20 @@ namespace ExamApp.Data
                 CorrectLetter = "B",
                 Explanation = "A missing resource should return an HTTP 404, not fabricate or silently mutate data."
             },
+             new QuestionAnswer
+            {
+                Number = 20,
+                Question = "A student already belongs to Section A for a particular subject. The application attempts to assign the same student to Section A again. What is the primary concern?",
+                Options = new List<Option>
+                {
+                    new Option("A", "Data integrity"),
+                    new Option("B", "HTML formatting"),
+                    new Option("C", "CSS inheritance"),
+                    new Option("D", "Razor syntax")
+                },
+                CorrectLetter = "A",
+                Explanation = "Duplicate assignment is a data-integrity problem, unrelated to presentation concerns."
+             }
         };
     }
 }
