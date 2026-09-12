@@ -235,6 +235,20 @@ namespace ExamApp.Data
                 CorrectLetter = "A",
                 Explanation = "A DB-level constraint is the last line of defense, independent of any app-layer checks."
             },
+             new QuestionAnswer
+            {
+                Number = 17,
+                Question = "What is the purpose of a try...catch block in a controller?",
+                Options = new List<Option>
+                {
+                    new Option("A", "To create navigation properties"),
+                    new Option("B", "To catch and handle exceptions that may occur during execution"),
+                    new Option("C", "To generate database tables"),
+                    new Option("D", "To perform client-side validation")
+                },
+                CorrectLetter = "B",
+                Explanation = "try...catch lets the controller gracefully handle runtime errors instead of crashing."
+            },
         };
     }
 }
