@@ -24,3 +24,6 @@ namespace ExamApp.Data
                 CorrectLetter = "C",
                 Explanation = "In-memory collections vanish once the app stops; a database keeps the data around between runs."
             },
+        };
+    }
+}
