@@ -23,6 +23,21 @@ namespace ExamApp.Data
                 },
                 CorrectLetter = "C",
                 Explanation = "In-memory collections vanish once the app stops; a database keeps the data around between runs."
+
+            },
+            new QuestionAnswer
+            {
+                Number = 2,
+                Question = "Which approach is being used when an existing database is used to generate EF Core entity classes?",
+                Options = new List<Option>
+                {
+                    new Option("A", "Code-First"),
+                    new Option("B", "Database-First"),
+                    new Option("C", "Model-First"),
+                    new Option("D", "Controller-First")
+                },
+                CorrectLetter = "B",
+                Explanation = "Reverse-engineering models from an existing schema is the Database-First workflow."
             },
         };
     }
