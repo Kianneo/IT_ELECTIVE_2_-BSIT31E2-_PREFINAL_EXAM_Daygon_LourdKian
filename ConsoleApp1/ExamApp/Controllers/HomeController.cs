@@ -1,32 +1,20 @@
-using System.Diagnostics;
-using ExamApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using PrefinalExam.Data;
+using PrefinalExam.Models;
 
-namespace ExamApp.Controllers
+namespace PrefinalExam.Controllers
 {
     public class HomeController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+    {}
         public IActionResult Index()
         {
-            return View();
+            List<QuestionAnswer> questions = ExamData.Questions;
+            return View(questions);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }
