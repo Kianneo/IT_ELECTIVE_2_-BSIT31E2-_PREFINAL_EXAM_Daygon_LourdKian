@@ -123,6 +123,20 @@ namespace ExamApp.Data
                 CorrectLetter = "B",
                 Explanation = "SectionId is the scalar foreign key column pointing back to the Section table."
             },
+             new QuestionAnswer
+            {
+                Number = 9,
+                Question = "What is the purpose of a navigation property such as public Section Section { get; set; }?",
+                Options = new List<Option>
+                {
+                    new Option("A", "It stores the database password"),
+                    new Option("B", "It represents a relationship to another entity"),
+                    new Option("C", "It creates a new database"),
+                    new Option("D", "It validates the student's name")
+                },
+                CorrectLetter = "B",
+                Explanation = "Navigation properties let you traverse from one entity to its related entity in code."
+            },
         };
     }
 }
