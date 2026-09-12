@@ -1,10 +1,5 @@
-﻿namespace PrefinalExam.Models
+﻿namespace ExamApp.Models
 {
-    /// <summary>
-    /// Represents one multiple-choice item from the prefinal exam,
-    /// together with the answer that was chosen for it.
-    /// No database is involved -- this is a plain in-memory model.
-    /// </summary>
     public class QuestionAnswer
     {
         public int Number { get; set; }

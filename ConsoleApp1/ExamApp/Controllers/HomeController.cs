@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
-using PrefinalExam.Data;
-using PrefinalExam.Models;
+using ExamApp.Data;
+using ExamApp.Models;
 
 namespace PrefinalExam.Controllers
 {
     public class HomeController : Controller
-    {}
+    {
         public IActionResult Index()
         {
             List<QuestionAnswer> questions = ExamData.Questions;
